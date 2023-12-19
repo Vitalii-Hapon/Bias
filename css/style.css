@@ -1,34 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Raleway:wght@400;600;700&display=swap");
-:root {
-  --max-width: 107.5rem;
-  --header-hight: 6.875rem;
-  --intro-section-radius: 2.5rem;
-}
-
-body {
-  color: #303030;
-  font: 400 32px Raleway, sans-serif;
-}
-
-.content-wrapper {
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.content-wrapper > * {
+header nav {
   width: 100vw;
   max-width: var(--max-width);
-}
-
-nav {
   display: flex;
   justify-content: space-between;
   position: fixed;
   background-color: #fff;
 }
-nav ol {
+header nav ol {
   margin: 0;
   padding: 0;
   display: flex;
@@ -38,24 +18,60 @@ nav ol {
   justify-content: space-between;
   width: 38%;
 }
-nav ol li {
+header nav ol li {
   cursor: pointer;
 }
-nav ol li a {
+header nav ol li a {
   display: block;
 }
-nav ol li:first-child {
+header nav ol li:first-child {
   margin-left: 0;
 }
-nav ol:last-child {
+header nav ol:last-child {
   width: 42%;
   justify-content: space-around;
 }
-nav a.logo {
+header nav a.logo {
   display: grid;
   position: absolute;
   left: calc(50% - 62px);
   height: var(--header-hight);
+}
+
+:root {
+  --max-width: 107.5rem;
+  --header-hight: 6.875rem;
+  --intro-section-radius: 2.5rem;
+}
+
+body {
+  color: #303030;
+  font: 400 2rem Raleway, sans-serif;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body > * {
+  width: 100vw;
+  max-width: var(--max-width);
+}
+
+.section-title, h2 {
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: 3.0625rem;
+}
+
+.section-title {
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.section-subtitle, h3 {
+  font-weight: 500;
+  line-height: 1.5;
+  font-size: 3.0625rem;
 }
 
 section.intro {
@@ -76,14 +92,15 @@ section.intro .intro-header {
   align-content: center;
   height: 100%;
   color: #FFF;
+  line-height: 1.5;
 }
 section.intro .intro-header h1, section.intro .intro-header h3 {
-  margin: 0;
   height: fit-content;
   text-align: center;
 }
-section.intro .intro-header h3 {
-  font-weight: 500;
+section.intro .intro-header h1 {
+  font-size: 5.375rem;
+  font-weight: 700;
 }
 section.intro .intro-footer {
   width: 100%;
@@ -101,15 +118,18 @@ section.intro .intro-footer .contact-name {
   width: fit-content;
 }
 section.intro .intro-footer .contact-number {
-  font: 600 30px/170% Montserrat, sans-serif;
+  font: 600 1.875rem Montserrat, sans-serif;
   color: #464646;
   text-decoration: none;
+}
+
+section.services {
+  margin-top: 4.76rem;
 }
 
 .div-19 {
   color: #303030;
   text-align: center;
-  text-transform: uppercase;
   margin-top: 94px;
   font: 600 49px/150% Raleway, sans-serif;
 }

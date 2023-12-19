@@ -1,129 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Raleway:wght@400;600;700&display=swap');
+@import "_header";
+@import "_global-styles";
+@import "_intro";
 
-:root {
-  --max-width: 107.5rem;
-  --header-hight: 6.875rem;
-  --intro-section-radius: 2.5rem;
-}
-
-body {
-  color: #303030;
-  font: 400 32px Raleway, sans-serif;
-}
-
-.content-wrapper {
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  & > * {
-    width: 100vw;
-    max-width: var(--max-width);
-  }
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  position: fixed;
-  background-color: #fff;
-
-  ol {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    height: var(--header-hight);
-    list-style: none;
-    justify-content: space-between;
-    width: 38%;
-    li {
-      cursor: pointer;
-      a {
-        display: block;
-      }
-    }
-    li:first-child {
-      margin-left: 0;
-    }
-  }
-
-  ol:last-child {
-    width: 42%;
-    justify-content: space-around;
-  }
-
-  a.logo {
-    display: grid;
-    position: absolute;
-    left: calc(50% - 62px);
-    height: var(--header-hight);
-  }
-}
-
-section.intro {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: url("./../assets/intro.webp"), rgba(0, 0, 0, 0.36);
-  background-blend-mode: color;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  aspect-ratio: 2.21;
-  border-radius: 40px;
-  margin-top: var(--header-hight);
-
-
-  .intro-header {
-    display: grid;
-    align-content: center;
-    height: 100%;
-    color: #FFF;
-
-    h1, h3 {
-      margin: 0;
-      height: fit-content;
-      text-align: center;
-    }
-
-    h3 {
-      font-weight: 500;
-    }
-  }
-
-  .intro-footer {
-    width: 100%;
-    padding: 2.375rem 12.25rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #F8E967;
-    border-bottom-left-radius: var(--intro-section-radius);
-    border-bottom-right-radius: var(--intro-section-radius);
-    font-size: 1.875rem;
-    line-height: 1.7;
-
-    .contact-name {
-      width: fit-content;
-    }
-
-    .contact-number {
-      //font: 600 1.875rem Montserrat, sans-serif;
-      font: 600 30px/170% Montserrat, sans-serif;
-      color: #464646;
-      text-decoration: none;
-
-    }
-  }
+section.services {
+  margin-top: 4.76rem;
 }
 
 .div-19 {
   color: #303030;
   text-align: center;
-  text-transform: uppercase;
   margin-top: 94px;
   font: 600 49px/150% Raleway, sans-serif;
 }

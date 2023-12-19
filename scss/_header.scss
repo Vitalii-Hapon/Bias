@@ -1,0 +1,45 @@
+header {
+  nav {
+    width: 100vw;
+    max-width: var(--max-width);
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    background-color: var(--main-background-color);
+
+    ol {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      height: var(--header-hight);
+      list-style: none;
+      justify-content: space-between;
+      width: 38%;
+
+      li {
+        cursor: pointer;
+
+        a {
+          display: block;
+        }
+      }
+
+      li:first-child {
+        margin-left: 0;
+      }
+    }
+
+    ol:last-child {
+      width: 42%;
+      justify-content: space-around;
+    }
+
+    a.logo {
+      display: grid;
+      position: absolute;
+      left: calc(50% - 62px);
+      height: var(--header-hight);
+    }
+  }
+}

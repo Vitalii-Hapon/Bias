@@ -1,0 +1,40 @@
+:root {
+  --max-width: 107.5rem;
+  --header-hight: 6.875rem;
+  --intro-section-radius: 2.5rem;
+  --main-background-color: #fff;
+  --main-color: #303030;
+  --secondary-background-color: #2D2C2C;
+  --secondary-color: #fff;
+}
+
+body {
+  color: var(--main-color);
+  font: 400 2rem Raleway, sans-serif;
+  background-color: var(--main-background-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & > * {
+    width: 100vw;
+    max-width: var(--max-width);
+  }
+}
+
+.section-title, h2 {
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: 3.0625rem;
+}
+
+.section-title {
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.section-subtitle, h3 {
+  font-weight: 500;
+  line-height: 1.5;
+  font-size: 3.0625rem;
+}
