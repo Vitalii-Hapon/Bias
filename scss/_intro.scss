@@ -10,14 +10,14 @@ section.intro {
   aspect-ratio: 2.21;
   border-radius: 40px;
   margin-top: var(--header-hight);
-
+  width: calc(100vw - 2 * var(--body-padding));
+  padding: 0;
 
   .intro-header {
     display: grid;
     align-content: center;
     height: 100%;
     color: var(--secondary-color);
-    line-height: 1.5;
 
     h1, h3 {
       height: fit-content;
