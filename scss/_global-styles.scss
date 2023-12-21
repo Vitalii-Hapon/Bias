@@ -7,6 +7,11 @@
   --main-color: #303030;
   --secondary-background-color: #2D2C2C;
   --secondary-color: #fff;
+
+  --card-title-font-size: 2.25rem;
+  --section-title-font-size: 3.0625rem;
+  --card-footer-font-size: 1.75rem;
+  --paragragh-font-size: 1.625rem;
 }
 
 body {
@@ -26,7 +31,7 @@ body {
 
 .section-title, h2 {
   font-weight: 600;
-  font-size: 3.0625rem;
+  font-size: var(--section-title-font-size);
 }
 
 .section-title {
@@ -36,7 +41,7 @@ body {
 
 .section-subtitle, h3 {
   font-weight: 500;
-  font-size: 3.0625rem;
+  font-size: var(--section-title-font-size);
 }
 
 h4 {
@@ -44,5 +49,11 @@ h4 {
 }
 
 p, li {
-  font-size: 1.625rem;
+  font-size: var(--paragragh-font-size);
+}
+
+.background-image-property {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
