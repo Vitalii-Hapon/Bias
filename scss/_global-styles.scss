@@ -3,15 +3,18 @@
   --body-padding: 6.25rem;
   --header-hight: 6.875rem;
   --intro-section-radius: 2.5rem;
+
   --main-background-color: #fff;
   --main-color: #303030;
   --secondary-background-color: #2D2C2C;
   --secondary-color: #fff;
+  --contrast-color: #F8E967;
 
   --card-title-font-size: 2.25rem;
   --section-title-font-size: 3.0625rem;
   --card-footer-font-size: 1.75rem;
   --paragragh-font-size: 1.625rem;
+  --footer-font-size: 2rem;
 }
 
 body {
@@ -22,11 +25,11 @@ body {
   flex-direction: column;
   align-items: center;
   line-height: 1.5;
+}
 
-  & > * {
-    width: 100%;
-    max-width: var(--max-width);
-  }
+.content-container {
+  width: 100%;
+  max-width: var(--max-width);
 }
 
 .section-title, h2 {
@@ -56,4 +59,39 @@ p, li {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+.section-comics {
+  display: flex;
+  justify-content: space-between;
+  gap: 5.25rem;
+
+  .text-content {
+    width: 50%;
+  }
+
+  .img-content {
+    max-width: min(58.75rem, 50vw);
+    margin-right: -6.25rem;
+    display: flex;
+    align-items: center;
+
+    .img {
+      aspect-ratio: 1.21;
+      border-bottom-left-radius: 2.25rem;
+      border-top-left-radius: 2.25rem;
+    }
+  }
+}
+
+.section-comics.reverse {
+  .img-content {
+     margin-inline: -6.25rem 0;
+
+    .img {
+      border-radius: 0;
+      border-bottom-right-radius: 2.25rem;
+      border-top-right-radius: 2.25rem;
+    }
+  }
 }
