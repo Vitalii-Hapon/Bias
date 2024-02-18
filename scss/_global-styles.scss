@@ -17,6 +17,10 @@
   --footer-font-size: 2rem;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--main-color);
   font: 400 2rem Raleway, sans-serif;
@@ -58,7 +62,11 @@ p, li {
 .background-image-property {
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+}
+
+.icon.background-image-property {
+  background-size: auto;
 }
 
 .section-comics {
@@ -75,23 +83,19 @@ p, li {
     margin-right: -6.25rem;
     display: flex;
     align-items: center;
-
-    .img {
-      aspect-ratio: 1.21;
-      border-bottom-left-radius: 2.25rem;
-      border-top-left-radius: 2.25rem;
-    }
+    width: 100%;
+    aspect-ratio: 1.21;
+    border-bottom-left-radius: 2.25rem;
+    border-top-left-radius: 2.25rem;
   }
 }
 
 .section-comics.reverse {
   .img-content {
-     margin-inline: -6.25rem 0;
-
-    .img {
-      border-radius: 0;
-      border-bottom-right-radius: 2.25rem;
-      border-top-right-radius: 2.25rem;
-    }
+    margin-inline: -6.25rem 0;
+    border-radius: 0;
+    border-bottom-right-radius: 2.25rem;
+    border-top-right-radius: 2.25rem;
   }
 }
+

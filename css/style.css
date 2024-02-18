@@ -58,6 +58,10 @@ header nav a.logo {
   --footer-font-size: 2rem;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--main-color);
   font: 400 2rem Raleway, sans-serif;
@@ -99,7 +103,11 @@ p, li {
 .background-image-property {
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+}
+
+.icon.background-image-property {
+  background-size: auto;
 }
 
 .section-comics {
@@ -115,8 +123,7 @@ p, li {
   margin-right: -6.25rem;
   display: flex;
   align-items: center;
-}
-.section-comics .img-content .img {
+  width: 100%;
   aspect-ratio: 1.21;
   border-bottom-left-radius: 2.25rem;
   border-top-left-radius: 2.25rem;
@@ -124,8 +131,6 @@ p, li {
 
 .section-comics.reverse .img-content {
   margin-inline: -6.25rem 0;
-}
-.section-comics.reverse .img-content .img {
   border-radius: 0;
   border-bottom-right-radius: 2.25rem;
   border-top-right-radius: 2.25rem;
@@ -137,9 +142,6 @@ section.intro {
   align-items: center;
   background: url("./../assets/intro.webp"), rgba(0, 0, 0, 0.36);
   background-blend-mode: color;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
   aspect-ratio: 2.21;
   border-radius: 40px;
   margin-top: var(--header-hight);
@@ -192,6 +194,7 @@ section.services .vehicles .section-body {
   margin-top: 1.5rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, min(25.875rem, 80vw));
+  justify-content: center;
   gap: 1.25rem;
 }
 section.services .vehicles .section-body .card {
@@ -273,6 +276,9 @@ section.lab .section-comics .text-content ol {
   margin-left: 2.25rem;
   padding: 0;
 }
+section.lab .section-comics .img-content {
+  background-image: url("./../assets/lab.webp");
+}
 
 section.products {
   margin-top: 8.375rem;
@@ -319,9 +325,6 @@ section.products .product-info .upload-info-btn {
   background-image: url("./../assets/download.png");
   background-color: var(--contrast-color);
   border-radius: 5px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 section.gallery {
@@ -371,8 +374,35 @@ section.accomplishments .section-body .section-content .left-part li .icon, sect
 section.accomplishments .section-body .section-content .left-part li:first-child, section.accomplishments .section-body .section-content .right-part li:first-child {
   margin-top: 4.375rem;
 }
-section.accomplishments .section-body .section-content .left-part li:first-child .icon {
+section.accomplishments .section-body .section-content .padlock {
   background-image: url("./../assets/padlock.svg");
+}
+section.accomplishments .section-body .section-content .factory {
+  background-image: url("./../assets/factory.png");
+}
+section.accomplishments .section-body .section-content .tonnage {
+  background-image: url("./../assets/120.webp");
+}
+section.accomplishments .section-body .section-content .founded {
+  background-image: url("./../assets/1972.png");
+}
+section.accomplishments .section-body .section-content .staff {
+  background-image: url("./../assets/staff.png");
+}
+section.accomplishments .section-body .section-content .vehicles-park {
+  background-image: url("./../assets/vehicles-park.png");
+}
+section.accomplishments .section-body .section-content .industry-center {
+  background-image: url("./../assets/industry-center.png");
+}
+section.accomplishments .section-body .section-content .delivery {
+  background-image: url("./../assets/delivery.png");
+}
+section.accomplishments .section-body .section-content .lab {
+  background-image: url("./../assets/lab.png");
+}
+section.accomplishments .section-body .section-content .quality {
+  background-image: url("./../assets/quality.png");
 }
 
 section.history {
@@ -381,6 +411,9 @@ section.history {
 section.history .section-comics {
   margin-bottom: 6.25rem;
 }
+section.history .section-comics .img-content {
+  background-image: url("./../assets/history1.webp");
+}
 section.history h2 {
   margin-bottom: 5.625rem;
 }
@@ -388,8 +421,11 @@ section.history .section-comics.reverse .text-content {
   display: grid;
   align-items: center;
 }
+section.history .section-comics.reverse .img-content {
+  background-image: url("./../assets/history2.webp");
+}
 
-section.contacts {
+section.location-contacts {
   width: 100%;
   background-color: var(--secondary-background-color);
   color: var(--secondary-color);
@@ -397,27 +433,40 @@ section.contacts {
   justify-items: center;
   font-size: var(--card-footer-font-size);
 }
-section.contacts .section-comics {
+section.location-contacts .section-comics {
   width: 100%;
   max-width: calc(var(--max-width) + 2 * var(--body-padding));
   gap: 0;
 }
-section.contacts .section-comics div {
+section.location-contacts .section-comics div {
   width: 100%;
 }
-section.contacts .section-comics .text-content {
+section.location-contacts .section-comics .text-content {
   display: grid;
   justify-content: center;
   padding: 5.375rem var(--body-padding);
 }
-section.contacts .section-comics .text-content .physical-location {
+section.location-contacts .section-comics .text-content .physical-location, section.location-contacts .section-comics .text-content .mail {
   display: flex;
+  align-items: center;
+  gap: 1.5rem;
   margin-bottom: 2rem;
 }
-section.contacts .section-comics .text-content .working-hours-title {
+section.location-contacts .section-comics .text-content .icon {
+  width: 45px;
+  height: 45px;
+  background-size: cover;
+}
+section.location-contacts .section-comics .text-content .icon.location {
+  background-image: url("./../assets/location.png");
+}
+section.location-contacts .section-comics .text-content .icon.post {
+  background-image: url("./../assets/post.png");
+}
+section.location-contacts .section-comics .text-content .working-hours-title {
   margin-block: 4.125rem;
 }
-section.contacts .section-comics iframe {
+section.location-contacts .section-comics iframe {
   width: 100%;
   height: 100%;
 }
@@ -470,6 +519,15 @@ footer .divider {
   height: 1px;
   background-color: var(--secondary-background-color);
   width: min(1430px, 100%);
+}
+
+@media screen and (min-width: 992px) {
+  section.location-contacts .section-comics.location-contacts-wrapper .text-content {
+    padding-right: calc(var(--body-padding) + 5.3115rem);
+  }
+  section.location-contacts .section-comics.location-contacts-wrapper .map-content {
+    margin-left: -10.625rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

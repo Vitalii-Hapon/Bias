@@ -16,6 +16,7 @@ section.services {
       margin-top: 1.5rem;
       display: grid;
       grid-template-columns: repeat(auto-fill, min(25.875rem, 80vw));
+      justify-content: center;
       gap: 1.25rem;
 
       .card {
@@ -88,8 +89,6 @@ section.lab {
   width: 100%;
 
   .section-comics {
-
-
     .text-content {
       padding-block: 1.875rem;
 
@@ -111,6 +110,10 @@ section.lab {
         margin-left: 2.25rem;
         padding: 0;
       }
+    }
+
+    .img-content {
+      background-image: url('./../assets/lab.webp');
     }
   }
 }
@@ -164,12 +167,10 @@ section.products {
       background-image: url("./../assets/download.png");
       background-color: var(--contrast-color);
       border-radius: 5px;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
     }
   }
 }
+
 
 section.gallery {
   margin-top: 7.5rem;
@@ -226,8 +227,36 @@ section.accomplishments {
         }
       }
 
-      .left-part li:first-child .icon {
+      .padlock {
         background-image: url("./../assets/padlock.svg");
+      }
+
+      .factory {
+        background-image: url("./../assets/factory.png");
+      }
+      .tonnage {
+        background-image: url("./../assets/120.webp");
+      }
+      .founded {
+        background-image: url("./../assets/1972.png");
+      }
+      .staff {
+        background-image: url("./../assets/staff.png");
+      }
+      .vehicles-park {
+        background-image: url("./../assets/vehicles-park.png");
+      }
+      .industry-center {
+        background-image: url("./../assets/industry-center.png");
+      }
+      .delivery {
+        background-image: url("./../assets/delivery.png");
+      }
+      .lab {
+        background-image: url("./../assets/lab.png");
+      }
+      .quality {
+        background-image: url("./../assets/quality.png");
       }
     }
   }
@@ -235,21 +264,30 @@ section.accomplishments {
 
 section.history {
   margin-top: 8.125rem;
+
   .section-comics {
     margin-bottom: 6.25rem;
+    .img-content {
+      background-image: url("./../assets/history1.webp");
+    }
   }
+
   h2 {
     margin-bottom: 5.625rem;
   }
+
   .section-comics.reverse {
     .text-content {
       display: grid;
       align-items: center;
     }
+    .img-content {
+      background-image: url("./../assets/history2.webp");
+    }
   }
 }
 
-section.contacts {
+section.location-contacts {
   width: 100%;
   background-color: var(--secondary-background-color);
   color: var(--secondary-color);
@@ -271,10 +309,27 @@ section.contacts {
       justify-content: center;
       padding: 5.375rem var(--body-padding);
 
-      .physical-location {
+      .physical-location, .mail {
         display: flex;
+        align-items: center;
+        gap: 1.5rem;
         margin-bottom: 2rem;
       }
+
+      .icon {
+        width: 45px;
+        height: 45px;
+        background-size: cover;
+      }
+
+      .icon.location {
+        background-image: url("./../assets/location.png");
+      }
+
+      .icon.post {
+        background-image: url("./../assets/post.png");
+      }
+
 
       .working-hours-title {
         margin-block: 4.125rem;
@@ -339,5 +394,17 @@ footer {
     height: 1px;
     background-color: var(--secondary-background-color);
     width: min(1430px, 100%);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  section.location-contacts .section-comics.location-contacts-wrapper {
+    .text-content {
+      padding-right: calc(var(--body-padding) + 5.3115rem);
+    }
+
+    .map-content {
+      margin-left: calc(-2 * 5.3125rem);
+    }
   }
 }
