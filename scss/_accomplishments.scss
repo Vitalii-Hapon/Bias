@@ -1,0 +1,86 @@
+section.accomplishments {
+  width: 100%;
+  background-color: #2d2c2c;
+  padding-block: 5.625rem;
+  display: flex;
+  justify-content: center;
+  color: var(--secondary-color);
+  font-size: var(--card-title-font-size);
+
+  .section-body {
+
+    .section-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+
+      .left-part, .right-part {
+        width: 100%;
+
+        li {
+          display: flex;
+          align-items: center;
+          margin-right: 1rem;
+          margin-top: 5.5rem;
+          height: 5.625rem;
+          gap: 1rem;
+
+          .icon {
+            min-width: 5.375rem;
+            min-height: 5rem;
+            height: 100%;
+            display: grid;
+            justify-items: center;
+            background-size: contain;
+          }
+        }
+
+        li:first-child {
+          margin-top: 4.375rem;
+        }
+      }
+
+      .padlock {
+        background-image: url("./../assets/padlock.svg");
+      }
+      .factory {
+        background-image: url("./../assets/factory.png");
+      }
+      .tonnage {
+        background-image: url("./../assets/120.webp");
+      }
+      .founded {
+        background-image: url("./../assets/1972.png");
+      }
+      .staff {
+        background-image: url("./../assets/staff.png");
+      }
+      .vehicles-park {
+        background-image: url("./../assets/vehicles-park.png");
+      }
+      .industry-center {
+        background-image: url("./../assets/industry-center.png");
+      }
+      .delivery {
+        background-image: url("./../assets/delivery.png");
+      }
+      .lab {
+        background-image: url("./../assets/lab.png");
+      }
+      .quality {
+        background-image: url("./../assets/quality.png");
+      }
+    }
+  }
+
+  @media screen and (max-width: 992px){
+    .section-content {
+      gap: 0;
+      flex-direction: column;
+
+      li {
+        gap: 2rem;
+      }
+    }
+  }
+}

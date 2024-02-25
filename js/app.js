@@ -7,7 +7,7 @@ document.querySelectorAll(".anchor").forEach(anchor => {
             document.querySelector(this.getAttribute('href'));
         console.log('this target', targetElement);
         window.scrollTo({
-            top: targetElement.offsetTop - 150,
+            top: targetElement.offsetTop - 190,
             behavior: 'smooth'
         });
     });

@@ -1,0 +1,36 @@
+section.history {
+  margin-top: 8.125rem;
+
+  .section-comics {
+    margin-bottom: 6.25rem;
+    .img-content {
+      background-image: url("./../assets/history1.webp");
+    }
+  }
+
+  h2 {
+    margin-bottom: 5.625rem;
+  }
+
+  .section-comics.reverse {
+    .text-content {
+      display: grid;
+      align-items: center;
+    }
+    .img-content {
+      background-image: url("./../assets/history2.webp");
+    }
+  }
+
+  @media screen and (max-width: 1440px) {
+    margin-top: 4rem;
+  }
+  @media screen and (max-width: 1200px) {
+    .section-comics:first-of-type {
+      margin-bottom: 3.25rem;
+    }
+    h2 {
+      margin-bottom: 3rem;
+    }
+  }
+}

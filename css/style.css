@@ -6,22 +6,18 @@ header {
   justify-items: center;
   position: fixed;
   width: 100%;
+  z-index: 102;
 }
-header nav .logo-wrapper {
-  display: grid;
-  justify-items: center;
-  width: 100%;
-  max-width: min(var(--max-width), 94vw);
+header nav .logo {
+  position: relative;
+  left: calc(50% - 62px);
 }
 header nav .links-wrapper {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
-header nav .for-pc {
-  display: none;
-}
-header nav ol {
+header nav .links-wrapper ol {
   margin: 0;
   padding: 0;
   display: flex;
@@ -30,15 +26,18 @@ header nav ol {
   list-style: none;
   justify-content: space-between;
 }
-header nav ol li {
+header nav .links-wrapper ol li {
   cursor: pointer;
 }
-header nav ol li a {
+header nav .links-wrapper ol li a {
   display: block;
   margin-block: auto;
 }
-header nav ol li:first-child {
+header nav .links-wrapper ol li:first-child {
   margin-left: 0;
+}
+header nav .for-pc {
+  display: none;
 }
 @media screen and (min-width: 1100px) {
   header nav .for-pc {
@@ -54,11 +53,14 @@ header nav ol li:first-child {
     width: 42%;
     justify-content: space-around;
   }
-  header nav .logo-wrapper {
+  header nav .logo {
     position: absolute;
   }
 }
 @media screen and (max-width: 768px) {
+  header .logo.anchor {
+    left: calc(50% - 38px);
+  }
   header .logo.anchor .img {
     height: 50px;
   }
@@ -780,6 +782,9 @@ section.person-contacts .person-list li {
   align-items: flex-end;
   justify-items: center;
 }
+section.person-contacts .person-list li p {
+  justify-self: start;
+}
 section.person-contacts .person-list li a {
   font-weight: 600;
 }
@@ -819,6 +824,11 @@ footer .divider {
   height: 1px;
   background-color: var(--secondary-background-color);
   width: min(1430px, 100%);
+}
+@media screen and (max-width: 1200px) {
+  footer nav ul {
+    padding-block: 3rem;
+  }
 }
 @media screen and (max-width: 550px) {
   footer nav {

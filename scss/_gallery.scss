@@ -1,0 +1,42 @@
+section.gallery {
+  margin-top: 7.5rem;
+  margin-bottom: 8.75rem;
+
+  .gallery-wrapper {
+    margin-top: 2.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    .card {
+      width: 415px;
+      height: 320px;
+    }
+
+    .swiper-button {
+      height: 62px;
+      width: 62px;
+      background-color: #F8E967;
+      background-size: 28px;
+      border-radius: 50px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .swiper-button-next {
+      background-image: url("./../assets/Arrow2.webp");
+    }
+    .swiper-button-prev {
+      background-image: url("./../assets/Arrow1.webp");
+    }
+  }
+  @media screen and (max-width: 1440px) {
+    margin-block: 5rem 6rem;
+  }
+}
+
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after,
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+  content: "" !important;
+}
+
