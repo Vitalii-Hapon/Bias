@@ -7,30 +7,48 @@
     <title></title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <meta name="description" content="">
 </head>
 
 <body>
 <header>
     <nav class="content-container">
-        <a class="logo anchor" href="#intro"><img
-                loading="lazy"
-                src="./assets/logo.svg"
-                class="img"
-                alt="logo"
-        />
-        </a>
-        <ol>
-            <li><a href="#services" class="anchor">Послуги</a></li>
-            <li><a href="#products" class="anchor">Продукція</a></li>
-            <li><a href="#history" class="anchor">Про нас</a></li>
-        </ol>
-        <ol>
-            <li><a href="#accomplishments" class="anchor">Переваги</a></li>
-            <li><a href="#contacts" class="anchor">Контакти</a></li>
-        </ol>
+        <div class="logo-wrapper">
+            <a class="logo anchor" href="#intro"><img
+                    loading="lazy"
+                    src="./assets/logo.svg"
+                    class="img"
+                    alt="logo"
+            />
+            </a>
+        </div>
+        <div class="links-wrapper for-pc">
+            <ol>
+                <li><a href="#services" class="anchor">Послуги</a></li>
+                <li><a href="#products" class="anchor">Продукція</a></li>
+                <li><a href="#history" class="anchor">Про нас</a></li>
+            </ol>
+            <ol>
+                <li><a href="#accomplishments" class="anchor">Переваги</a></li>
+                <li><a href="#contacts" class="anchor">Контакти</a></li>
+            </ol>
+        </div>
+        <div class="links-wrapper for-mobile">
+            <ol class="links-wrapper">
+                <li><a href="#services" class="anchor">Послуги</a></li>
+                <li><a href="#products" class="anchor">Продукція</a></li>
+                <li><a href="#history" class="anchor">Про нас</a></li>
+                <li><a href="#accomplishments" class="anchor">Переваги</a></li>
+                <li><a href="#contacts" class="anchor">Контакти</a></li>
+            </ol>
+        </div>
     </nav>
 </header>
+
 <section aria-label="intro" class="intro content-container background-image-property" id="intro">
     <div class="intro-header">
         <h1>ПрАТ БИАС</h1>
@@ -39,14 +57,19 @@
         </h3>
     </div>
     <div class="intro-footer">
-        <p class="contact-name">
-            <b>Директор</b> Романенко Костянтин Семенович
-        </p>
-        <a class="contact-number" href="tel:+38067-614-61-38">067-614-61-38</a>
-        <a class="contact-number" href="tel:061-214-61-38">061-214-61-38</a>
+        <div class="intro-footer-content">
+            <p class="contact-name">
+                <b>Директор</b> Романенко Костянтин Семенович
+            </p>
+            <div class="tel-wrapper">
+                <a class="contact-number" href="tel:+38067-614-61-38">067-614-61-38</a>
+                <a class="contact-number" href="tel:061-214-61-38">061-214-61-38</a>
+            </div>
+        </div>
     </div>
 
 </section>
+
 <section aria-label="services" class="services" id="services">
     <div class="section-title-wrapper content-container">
         <h2 class="section-title">Послуги</h2>
@@ -243,7 +266,7 @@
     </section>
 
     <section class="roads content-container" aria-label="roads repair">
-        <h3>Ремонт доріг</h3>
+        <h3 class="section-subtitle">Ремонт доріг</h3>
         <div class="section-body">
             <div class="card">
                 <div class="card-order">1</div>
@@ -350,35 +373,67 @@
 <section class="gallery content-container" id="gallery" aria-label="gallery">
     <h2 class="section-title">Галерея</h2>
 
-    <div class="gallery-wrapper">
-        <div class="card">
-            <img
-                    loading="lazy"
-                    srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/3ddcc4bc-8a99-4360-bec6-7023cee2dc1a?apiKey=dce68a849c3b423e88f333980549f2ca&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/3ddcc4bc-8a99-4360-bec6-7023cee2dc1a?apiKey=dce68a849c3b423e88f333980549f2ca&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/3ddcc4bc-8a99-4360-bec6-7023cee2dc1a?apiKey=dce68a849c3b423e88f333980549f2ca&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/3ddcc4bc-8a99-4360-bec6-7023cee2dc1a?apiKey=dce68a849c3b423e88f333980549f2ca&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/3ddcc4bc-8a99-4360-bec6-7023cee2dc1a?apiKey=dce68a849c3b423e88f333980549f2ca&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/3ddcc4bc-8a99-4360-bec6-7023cee2dc1a?apiKey=dce68a849c3b423e88f333980549f2ca&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/3ddcc4bc-8a99-4360-bec6-7023cee2dc1a?apiKey=dce68a849c3b423e88f333980549f2ca&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/3ddcc4bc-8a99-4360-bec6-7023cee2dc1a?apiKey=dce68a849c3b423e88f333980549f2ca&"
-                    class="img"
-            />
+    <div class="gallery-wrapper swiper">
+        <div class="swiper-wrapper">
+            <div class="card swiper-slide">
+                <img
+                        loading="lazy"
+                        srcset="./assets/gallery1.webp"
+                        class="img"
+                />
+            </div>
+            <div class="card swiper-slide">
+                <img
+                        loading="lazy"
+                        srcset="./assets/gallery2.webp"
+                        class="img"
+                />
+            </div>
+            <div class="card swiper-slide">
+                <img
+                        loading="lazy"
+                        srcset="./assets/gallery3.webp"
+                        class="img"
+                />
+            </div>
+            <div class="card swiper-slide">
+                <img
+                        loading="lazy"
+                        srcset="./assets/gallery4.webp"
+                        class="img"
+                />
+            </div>
+            <div class="card swiper-slide">
+                <img
+                        loading="lazy"
+                        srcset="./assets/gallery1.webp"
+                        class="img"
+                />
+            </div>
+            <div class="card swiper-slide">
+                <img
+                        loading="lazy"
+                        srcset="./assets/gallery2.webp"
+                        class="img"
+                />
+            </div>
+            <div class="card swiper-slide">
+                <img
+                        loading="lazy"
+                        srcset="./assets/gallery3.webp"
+                        class="img"
+                />
+            </div>
+            <div class="card swiper-slide">
+                <img
+                        loading="lazy"
+                        srcset="./assets/gallery4.webp"
+                        class="img"
+                />
+            </div>
         </div>
-        <div class="card">
-            <img
-                    loading="lazy"
-                    srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/97703f1e6cba64cf1eebdb2871d2cfcb4bcc05adfbfeac35ccdc62241e0f579d?apiKey=dce68a849c3b423e88f333980549f2ca&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/97703f1e6cba64cf1eebdb2871d2cfcb4bcc05adfbfeac35ccdc62241e0f579d?apiKey=dce68a849c3b423e88f333980549f2ca&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/97703f1e6cba64cf1eebdb2871d2cfcb4bcc05adfbfeac35ccdc62241e0f579d?apiKey=dce68a849c3b423e88f333980549f2ca&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/97703f1e6cba64cf1eebdb2871d2cfcb4bcc05adfbfeac35ccdc62241e0f579d?apiKey=dce68a849c3b423e88f333980549f2ca&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/97703f1e6cba64cf1eebdb2871d2cfcb4bcc05adfbfeac35ccdc62241e0f579d?apiKey=dce68a849c3b423e88f333980549f2ca&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/97703f1e6cba64cf1eebdb2871d2cfcb4bcc05adfbfeac35ccdc62241e0f579d?apiKey=dce68a849c3b423e88f333980549f2ca&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/97703f1e6cba64cf1eebdb2871d2cfcb4bcc05adfbfeac35ccdc62241e0f579d?apiKey=dce68a849c3b423e88f333980549f2ca&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/97703f1e6cba64cf1eebdb2871d2cfcb4bcc05adfbfeac35ccdc62241e0f579d?apiKey=dce68a849c3b423e88f333980549f2ca&"
-                    class="img"
-            />
-        </div>
-        <div class="card">
-            <img
-                    loading="lazy"
-                    srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/2a25b15ae0346f1722474c75569b1e38e9a1407ff68e99a36bedbc98ec699815?apiKey=dce68a849c3b423e88f333980549f2ca&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/2a25b15ae0346f1722474c75569b1e38e9a1407ff68e99a36bedbc98ec699815?apiKey=dce68a849c3b423e88f333980549f2ca&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/2a25b15ae0346f1722474c75569b1e38e9a1407ff68e99a36bedbc98ec699815?apiKey=dce68a849c3b423e88f333980549f2ca&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/2a25b15ae0346f1722474c75569b1e38e9a1407ff68e99a36bedbc98ec699815?apiKey=dce68a849c3b423e88f333980549f2ca&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/2a25b15ae0346f1722474c75569b1e38e9a1407ff68e99a36bedbc98ec699815?apiKey=dce68a849c3b423e88f333980549f2ca&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/2a25b15ae0346f1722474c75569b1e38e9a1407ff68e99a36bedbc98ec699815?apiKey=dce68a849c3b423e88f333980549f2ca&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/2a25b15ae0346f1722474c75569b1e38e9a1407ff68e99a36bedbc98ec699815?apiKey=dce68a849c3b423e88f333980549f2ca&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/2a25b15ae0346f1722474c75569b1e38e9a1407ff68e99a36bedbc98ec699815?apiKey=dce68a849c3b423e88f333980549f2ca&"
-                    class="img"
-            />
-        </div>
-        <div class="card">
-            <img
-                    loading="lazy"
-                    srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/f36d4d6b-795b-4280-ab6b-86d82689146f?apiKey=dce68a849c3b423e88f333980549f2ca&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/f36d4d6b-795b-4280-ab6b-86d82689146f?apiKey=dce68a849c3b423e88f333980549f2ca&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/f36d4d6b-795b-4280-ab6b-86d82689146f?apiKey=dce68a849c3b423e88f333980549f2ca&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/f36d4d6b-795b-4280-ab6b-86d82689146f?apiKey=dce68a849c3b423e88f333980549f2ca&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/f36d4d6b-795b-4280-ab6b-86d82689146f?apiKey=dce68a849c3b423e88f333980549f2ca&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/f36d4d6b-795b-4280-ab6b-86d82689146f?apiKey=dce68a849c3b423e88f333980549f2ca&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/f36d4d6b-795b-4280-ab6b-86d82689146f?apiKey=dce68a849c3b423e88f333980549f2ca&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/f36d4d6b-795b-4280-ab6b-86d82689146f?apiKey=dce68a849c3b423e88f333980549f2ca&"
-                    class="img"
-            />
-        </div>
+        <div class="swiper-button swiper-button-prev"></div>
+        <div class="swiper-button swiper-button-next"></div>
     </div>
 </section>
 
@@ -571,6 +626,7 @@
     <div class="rights">All rights resived 2023</div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>

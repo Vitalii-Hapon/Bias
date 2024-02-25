@@ -12,3 +12,24 @@ document.querySelectorAll(".anchor").forEach(anchor => {
         });
     });
 });
+
+new Swiper(".swiper", {
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    grabCursor: true,
+    slideToClikeSlide: true,
+    keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+        pageUpDown: true,
+    },
+    mousewheel: {
+        sensitivity: 1,
+    },
+    loop: true,
+    speed: 1000,
+    spaceBetween: 20,
+    slidesPerView: 'auto',
+});

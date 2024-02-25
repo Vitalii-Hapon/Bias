@@ -6,8 +6,22 @@ header {
   width: 100%;
 
   nav {
-    display: flex;
-    justify-content: space-between;
+    .logo-wrapper {
+      display: grid;
+      justify-items: center;
+      width: 100%;
+      max-width: min(var(--max-width), 94vw);
+    }
+
+    .links-wrapper {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .for-pc {
+      display: none;
+    }
 
     ol {
       margin: 0;
@@ -17,13 +31,13 @@ header {
       height: var(--header-hight);
       list-style: none;
       justify-content: space-between;
-      width: 38%;
 
       li {
         cursor: pointer;
 
         a {
           display: block;
+          margin-block: auto;
         }
       }
 
@@ -31,17 +45,37 @@ header {
         margin-left: 0;
       }
     }
+  }
 
-    ol:last-child {
-      width: 42%;
-      justify-content: space-around;
+  @media screen and (min-width: 1100px) {
+    nav {
+      .for-pc {
+        display: flex;
+      }
+
+      .for-mobile {
+        display: none;
+      }
+
+      ol {
+        width: 38%;
+      }
+
+      ol:last-child {
+        width: 42%;
+        justify-content: space-around;
+      }
+
+      .logo-wrapper {
+        position: absolute;
+      }
     }
-
-    a.logo {
-      display: grid;
-      position: absolute;
-      left: calc(50% - 62px);
-      height: var(--header-hight);
+  }
+  @media screen and (max-width: 768px) {
+    .logo.anchor {
+      .img {
+        height: 50px;
+      }
     }
   }
 }

@@ -10,15 +10,75 @@
   --secondary-color: #fff;
   --contrast-color: #F8E967;
 
-  --card-title-font-size: 2.25rem;
   --section-title-font-size: 3.0625rem;
+  --card-title-font-size: 2.25rem;
+  --footer-font-size: 2rem;
   --card-footer-font-size: 1.75rem;
   --paragragh-font-size: 1.625rem;
-  --footer-font-size: 2rem;
+
+
 }
 
 html {
   scroll-behavior: smooth;
+  @media screen and (max-width: 1960px){
+    .section-comics.content-container, .history.content-container {
+      max-width: 100%;
+      padding-left: 3vw;
+      .img-content {
+        margin: 0;
+      }
+    }
+    .section-comics.reverse {
+      margin-left: -3vw;
+      padding-right: 3vw;
+    }
+  }
+  @media screen and (max-width: 1440px){
+    font-size: 14px;
+    .section-title, .section-subtitle {
+      text-align: center;
+    }
+    .section-comics {
+      gap: 3rem;
+      .section-title, .section-subtitle {
+        text-align: left;
+      }
+    }
+  }
+  @media screen and (max-width: 1200px){
+    .section-comics.content-container, .history.content-container .section-comics {
+      flex-direction: column;
+      gap: 2rem;
+      padding-inline: 3vw;
+
+      & > div {
+        width: 100%;
+        max-width: 100%;
+      }
+      .img-content {
+        border-radius: 2.25rem;
+        aspect-ratio: 1.8;
+      }
+    }
+    .history.content-container .section-comics.reverse {
+      flex-direction: column-reverse;
+    }
+  }
+  @media screen and (max-width: 992px){
+    font-size: 12px;
+    --section-title-font-size: 2.5rem;
+  }
+  @media screen and (max-width: 768px){
+    font-size: 10px;
+    --section-title-font-size: 2.25rem;
+    --card-title-font-size: 2rem;
+    --footer-font-size: 1.75rem;
+    --paragragh-font-size: 1.5rem;
+  }
+  @media screen and (max-width: 500px){
+    font-size: 8px;
+  }
 }
 
 body {
@@ -33,7 +93,7 @@ body {
 
 .content-container {
   width: 100%;
-  max-width: var(--max-width);
+  max-width: min(var(--max-width), 94vw);
 }
 
 .section-title, h2 {
@@ -98,4 +158,5 @@ p, li {
     border-top-right-radius: 2.25rem;
   }
 }
+
 
