@@ -625,7 +625,7 @@ section.accomplishments .section-body .section-content .factory {
   background-image: url("./../assets/factory.png");
 }
 section.accomplishments .section-body .section-content .tonnage {
-  background-image: url("./../assets/120.webp");
+  background-image: url("./../assets/110.png");
 }
 section.accomplishments .section-body .section-content .founded {
   background-image: url("./../assets/1972.png");
@@ -754,7 +754,7 @@ section.location-contacts .section-comics iframe {
     padding: 0 5vw 5vw;
   }
   section.location-contacts .section-comics .map-content {
-    aspect-ratio: 2;
+    height: 50vw;
   }
   section.location-contacts .section-comics .map-content iframe {
     border-radius: 2.25rem;
